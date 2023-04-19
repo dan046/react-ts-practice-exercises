@@ -30,12 +30,18 @@ export default function SimpleForm() {
       setErrorMsg('Email must not be empty');
       return false;
     }
-    if (formData.password.length <= 0) {
+    if (formData.password.length === 0) {
       setisFormSubmitted(false);
       setErrorMsg('Password must not be empty');
       return false;
     }
+    if (formData.password.length < 6) {
+      setisFormSubmitted(false);
+      setErrorMsg('Must not be less than 6 characters');
+      return false;
+    }
     setisFormSubmitted(true);
+    setErrorMsg('');
     return true;
   };
 
