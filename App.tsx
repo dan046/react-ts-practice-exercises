@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ArrayEasy from './components/ArrayEasy';
 import Counter from './components/Counter';
 import Toggle from './components/Toggle';
 import './style.css';
@@ -16,6 +17,7 @@ export default function App() {
           <Toggle />
         </div>
       </section>
+      <ArrayEasy />
     </Card>
   );
 }
