@@ -18,7 +18,7 @@ export default function Products() {
   return (
     <div className="price__container">
       <h3>Fruit Prices</h3>
-      <div>{prices}</div>
+      <p>{prices}</p>
     </div>
   );
 }

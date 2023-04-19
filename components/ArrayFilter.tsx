@@ -27,9 +27,9 @@ export default function ArrayFilter() {
   return (
     <div>
       <h3>Current list of users</h3>
-      <span>{showData}</span>
+      <p>{showData}</p>
       <h3>Users whose age is greater than or equal to 35</h3>
-      <span>{filter}</span>
+      <p>{filter}</p>
     </div>
   );
 }
