@@ -14,9 +14,17 @@ export default function App() {
       <h1>React Exercises</h1>
       <section className="container">
         <div className="counter__container">
+          <h3>Exercise 1: Create a counter. </h3>
+          <p>A value should be added when the user clicks a button. </p>
+          <small>BONUS: ADD A BUTTON THAT RESETS THE COUNTER BACK TO 0.</small>
           <Counter />
         </div>
         <div className="squaredValues__container">
+          <h3>Exercise 2: Map Array Method</h3>
+          <p>
+            Use an array method on the original values showing each squared
+            value.
+          </p>
           <ArrayEasy />
         </div>
         <div className="fruitsLength__container">
