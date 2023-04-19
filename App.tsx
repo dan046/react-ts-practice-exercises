@@ -14,12 +14,16 @@ export default function App() {
         <div className="counter__container">
           <Counter />
         </div>
+        <div className="squaredValues__container">
+          <ArrayEasy />
+        </div>
+        <div className="fruitsLength__container">
+          <FruitsLength />
+        </div>
         <div className="toggle-form__container">
           <Toggle />
         </div>
       </section>
-      <ArrayEasy />
-      <FruitsLength />
     </Card>
   );
 }
