@@ -2,6 +2,7 @@ import * as React from 'react';
 import ArrayEasy from './components/ArrayEasy';
 import ArrayFilter from './components/ArrayFilter';
 import FruitsLength from './components/ArrayFruits';
+import ArrayProductFilter from './components/ArrayProductFilter';
 import Counter from './components/Counter';
 import Toggle from './components/Toggle';
 import './style.css';
@@ -10,8 +11,8 @@ import Card from './ui/Card';
 export default function App() {
   return (
     <Card>
+      <h1>React Exercises</h1>
       <section className="container">
-        <h1>React Exercises</h1>
         <div className="counter__container">
           <Counter />
         </div>
@@ -23,6 +24,9 @@ export default function App() {
         </div>
         <div className="arrayFilter__container">
           <ArrayFilter />
+        </div>
+        <div className="productPrices__container">
+          <ArrayProductFilter />
         </div>
         <div className="toggle-form__container">
           <Toggle />

@@ -24,13 +24,18 @@ p {
   font-family: Lato;
 }
 
+ul,
+li {
+  list-style-type: none;
+}
+
 .counter,
 .toggle,
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -58,4 +63,10 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.price__container {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
 }
