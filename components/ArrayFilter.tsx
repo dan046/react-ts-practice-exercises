@@ -8,6 +8,11 @@ export default function ArrayFilter() {
     { id: 3, name: 'Bob', age: 35 },
     { id: 4, name: 'Alice', age: 40 },
   ];
+  const showData = users.map((data, index) => (
+    <div key={index}>
+      {data.name}, is {data.age} years old.
+    </div>
+  ));
   // Filter the array to create a new array with users whose age is greater than or equal to 35.
   const filter = users
     .filter((data) => data.age >= 35)
@@ -21,6 +26,8 @@ export default function ArrayFilter() {
 
   return (
     <div>
+      <h3>Current list of users</h3>
+      <span>{showData}</span>
       <h3>Users whose age is greater than or equal to 35</h3>
       <span>{filter}</span>
     </div>
