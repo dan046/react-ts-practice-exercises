@@ -4,6 +4,7 @@ export default function SimpleForm() {
   const [formData, setFormData] = React.useState({
     name: '',
     email: '',
+    password: '',
   });
   const [isFormSubmitted, setisFormSubmitted] = React.useState(false);
   const [errorMsg, setErrorMsg] = React.useState('');
@@ -19,7 +20,11 @@ export default function SimpleForm() {
 
   const formChangeHandler = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    if (formData.name.length === 0 && formData.email.length === 0) {
+    if (
+      formData.name.length === 0 &&
+      formData.email.length === 0 &&
+      formData.password.length === 0
+    ) {
       setisFormSubmitted(false);
       setErrorMsg('Fields not be empty');
       return false;
@@ -31,6 +36,7 @@ export default function SimpleForm() {
   return (
     <form className="form__container" onSubmit={formChangeHandler}>
       <h3>Simple Form</h3>
+
       <div>
         <label htmlFor="name">Name:</label>
         <input
@@ -40,6 +46,17 @@ export default function SimpleForm() {
           onChange={changeHandler}
         />
       </div>
+
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={changeHandler}
+        />
+      </div>
+
       <div>
         <label htmlFor="email">email:</label>
         <input
@@ -49,10 +66,11 @@ export default function SimpleForm() {
           onChange={changeHandler}
         />
       </div>
+
       {isFormSubmitted && (
         <div>
           <p>Hello, {formData.name}.</p>
-          <p>Your email address is: {formData.email}</p>
+          <p>Your email: {formData.email}</p>
         </div>
       )}
       <button>Submit</button>
