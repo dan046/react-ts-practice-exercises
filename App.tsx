@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ArrayEasy from './components/ArrayEasy';
+import FruitsLength from './components/ArrayFruits';
 import Counter from './components/Counter';
 import Toggle from './components/Toggle';
 import './style.css';
@@ -18,6 +19,7 @@ export default function App() {
         </div>
       </section>
       <ArrayEasy />
+      <FruitsLength />
     </Card>
   );
 }
