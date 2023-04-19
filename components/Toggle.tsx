@@ -8,10 +8,13 @@ export default function Toggle() {
     event.preventDefault();
     setStatus((current) => !current);
   };
+
   const statusText = status ? <SimpleForm /> : '';
+  const buttonText = status ? 'Close Form' : 'Open Form';
+
   return (
     <section className="toggle">
-      <button onClick={switchHandler}>Click to open form</button>
+      <button onClick={switchHandler}>{buttonText}</button>
       <span>{statusText}</span>
     </section>
   );
