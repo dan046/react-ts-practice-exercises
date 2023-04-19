@@ -9,10 +9,20 @@ export default function ArrayFilter() {
     { id: 4, name: 'Alice', age: 40 },
   ];
   // Filter the array to create a new array with users whose age is greater than or equal to 35.
+  const filter = users
+    .filter((data) => data.age >= 35)
+    .map((age, index) => (
+      <div key={index}>
+        <li>
+          {age.name} is {age.age} years old.
+        </li>
+      </div>
+    ));
 
   return (
     <div>
-      <div></div>
+      <h3>Users whose age is greater than or equal to 35</h3>
+      <span>{filter}</span>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ArrayEasy from './components/ArrayEasy';
+import ArrayFilter from './components/ArrayFilter';
 import FruitsLength from './components/ArrayFruits';
 import Counter from './components/Counter';
 import Toggle from './components/Toggle';
@@ -19,6 +20,9 @@ export default function App() {
         </div>
         <div className="fruitsLength__container">
           <FruitsLength />
+        </div>
+        <div className="arrayFilter__container">
+          <ArrayFilter />
         </div>
         <div className="toggle-form__container">
           <Toggle />
