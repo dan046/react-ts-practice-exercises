@@ -8,7 +8,7 @@ export default function ArrayEasy() {
     <div>
       <h3>Original Values</h3>
       <p>{numbers.join(', ').toLocaleString()}</p>
-      <h3>The square of each values by mapping.</h3>
+      <h3>Squared Values</h3>
       <p>{squaredValues.join(', ').toLocaleString()}</p>
     </div>
   );

@@ -13,8 +13,15 @@ export default function FruitsLength() {
 
   return (
     <div>
-      <h3>How many letters does each fruit have?</h3>
-      <div>{stringLength}</div>
+      <h3>Exercise 3: Word Length</h3>
+      <p>
+        Given an array of objects, use Array.map() to create a new array with a
+        specific property value of each object.
+      </p>
+      <div>
+        <h3>Answer:</h3>
+        {stringLength}
+      </div>
     </div>
   );
 }
