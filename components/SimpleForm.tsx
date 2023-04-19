@@ -13,11 +13,18 @@ export default function SimpleForm() {
       ...prevState,
       [name]: value,
     }));
+    setisFormSubmitted(false);
   };
 
   const formChangeHandler = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    if (formData.name.length === 0 && formData.email.length === 0) {
+      setisFormSubmitted(false);
+      console.log('Must not be empty');
+      return false;
+    }
     setisFormSubmitted(true);
+    return true;
   };
 
   return (
