@@ -20,13 +20,19 @@ export default function SimpleForm() {
 
   const formChangeHandler = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    if (
-      formData.name.length === 0 ||
-      formData.email.length === 0 ||
-      formData.password.length === 0
-    ) {
+    if (formData.name.length === 0) {
       setisFormSubmitted(false);
-      setErrorMsg('Fields not be empty');
+      setErrorMsg(`Name must not be empty`);
+      return false;
+    }
+    if (formData.email.length === 0) {
+      setisFormSubmitted(false);
+      setErrorMsg('Email must not be empty');
+      return false;
+    }
+    if (formData.password.length <= 0) {
+      setisFormSubmitted(false);
+      setErrorMsg('Password must not be empty');
       return false;
     }
     setisFormSubmitted(true);
