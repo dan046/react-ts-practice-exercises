@@ -21,8 +21,8 @@ export default function SimpleForm() {
   const formChangeHandler = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (
-      formData.name.length === 0 &&
-      formData.email.length === 0 &&
+      formData.name.length === 0 ||
+      formData.email.length === 0 ||
       formData.password.length === 0
     ) {
       setisFormSubmitted(false);
