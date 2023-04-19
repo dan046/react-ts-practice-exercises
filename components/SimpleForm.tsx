@@ -6,6 +6,7 @@ export default function SimpleForm() {
     email: '',
   });
   const [isFormSubmitted, setisFormSubmitted] = React.useState(false);
+  const [errorMsg, setErrorMsg] = React.useState('');
 
   const changeHandler = (e: any) => {
     const { name, value } = e.target;
@@ -20,7 +21,7 @@ export default function SimpleForm() {
     e.preventDefault();
     if (formData.name.length === 0 && formData.email.length === 0) {
       setisFormSubmitted(false);
-      console.log('Must not be empty');
+      setErrorMsg('Fields not be empty');
       return false;
     }
     setisFormSubmitted(true);
@@ -29,6 +30,7 @@ export default function SimpleForm() {
 
   return (
     <form className="form__container" onSubmit={formChangeHandler}>
+      <h3>Simple Form</h3>
       <div>
         <label htmlFor="name">Name:</label>
         <input
@@ -53,8 +55,8 @@ export default function SimpleForm() {
           <p>Your email address is: {formData.email}</p>
         </div>
       )}
-
       <button>Submit</button>
+      <small style={{ color: 'red' }}>{errorMsg}</small>
     </form>
   );
 }
