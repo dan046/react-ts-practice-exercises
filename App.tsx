@@ -1,17 +1,21 @@
 import * as React from 'react';
 import Counter from './components/Counter';
-import SimpleForm from './components/SimpleForm';
 import Toggle from './components/Toggle';
 import './style.css';
+import Card from './ui/Card';
 
 export default function App() {
   return (
-    <div className="main">
-      <h1>Counter</h1>
+    <Card>
       <section className="container">
-        <Counter />
-        <Toggle />
+        <h1>React Exercises</h1>
+        <div className="counter__container">
+          <Counter />
+        </div>
+        <div className="toggle-form__container">
+          <Toggle />
+        </div>
       </section>
-    </div>
+    </Card>
   );
 }

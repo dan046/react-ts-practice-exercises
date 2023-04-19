@@ -7,9 +7,10 @@ export default function Counter() {
     setCounter((counter) => counter + 1);
   };
   return (
-      <section className="counter">
-        <span>Count: {counter}</span>
-        <button onClick={countHandler}>Click to Count</button>
-      </section>
+    <section className="counter">
+      <h3>Counter: {counter}</h3>
+      <button onClick={countHandler}>Click to Count</button>
+      <button>Reset</button>
+    </section>
   );
 }
