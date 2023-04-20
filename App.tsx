@@ -5,6 +5,7 @@ import FruitsLength from './components/ArrayFruits';
 import ArrayProductFilter from './components/ArrayProductFilter';
 import Counter from './components/Counter';
 import Exercise5 from './components/Exercise5';
+import Exercise6 from './components/Exercise6';
 import Toggle from './components/Toggle';
 import './style.css';
 import Card from './ui/Card';
@@ -14,15 +15,10 @@ export default function App() {
     <Card>
       <h1>React Exercises</h1>
       <section className="container">
-        <div className="counter__container">
+        {/* <div className="counter__container">
           <Counter />
         </div>
         <div className="squaredValues__container">
-          <h3>Exercise 2: Map Array Method</h3>
-          <p>
-            Use an array method on the original values showing each squared
-            value.
-          </p>
           <ArrayEasy />
         </div>
         <div className="fruitsLength__container">
@@ -33,9 +29,12 @@ export default function App() {
         </div>
         <div className="productPrices__container">
           <ArrayProductFilter />
-        </div>
+        </div> */}
         <div className="exercise5__container">
           <Exercise5 />
+        </div>
+        <div className="exercise6__container">
+          <Exercise6 />
         </div>
         <div className="toggle-form__container">
           <Toggle />

@@ -6,6 +6,10 @@ export default function ArrayEasy() {
 
   return (
     <div>
+      <h3>Exercise 2: Map Array Method</h3>
+      <p>
+        Use an array method on the original values showing each squared value.
+      </p>
       <h3>Original Values</h3>
       <p>{numbers.join(', ').toLocaleString()}</p>
       <h3>Squared Values</h3>
