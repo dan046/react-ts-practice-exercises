@@ -30,9 +30,9 @@ export default function App() {
         <div className="productPrices__container">
           <ArrayProductFilter />
         </div> */}
-        <div className="exercise5__container">
+        {/* <div className="exercise5__container">
           <Exercise5 />
-        </div>
+        </div> */}
         <div className="exercise6__container">
           <Exercise6 />
         </div>
