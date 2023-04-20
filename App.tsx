@@ -4,6 +4,7 @@ import ArrayFilter from './components/ArrayFilter';
 import FruitsLength from './components/ArrayFruits';
 import ArrayProductFilter from './components/ArrayProductFilter';
 import Counter from './components/Counter';
+import Exercise5 from './components/Exercise5';
 import Toggle from './components/Toggle';
 import './style.css';
 import Card from './ui/Card';
@@ -14,7 +15,6 @@ export default function App() {
       <h1>React Exercises</h1>
       <section className="container">
         <div className="counter__container">
-
           <Counter />
         </div>
         <div className="squaredValues__container">
@@ -26,7 +26,6 @@ export default function App() {
           <ArrayEasy />
         </div>
         <div className="fruitsLength__container">
-
           <FruitsLength />
         </div>
         <div className="arrayFilter__container">
@@ -34,6 +33,9 @@ export default function App() {
         </div>
         <div className="productPrices__container">
           <ArrayProductFilter />
+        </div>
+        <div className="exercise5__container">
+          <Exercise5 />
         </div>
         <div className="toggle-form__container">
           <Toggle />
