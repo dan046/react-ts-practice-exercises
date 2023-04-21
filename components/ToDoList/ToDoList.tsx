@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React = require('react');
 import Button from '../ToDoList/Button';
+import { FaTimes } from 'react-icons/fa';
 
 export default function ToDo() {
   const [todos, setTodos] = useState([
@@ -8,8 +9,12 @@ export default function ToDo() {
     { id: 2, text: 'Do laundry', completed: true },
     { id: 3, text: 'Clean room', completed: false },
   ]);
-  const [deleteTask, setDeleteTask] = useState('');
   const [newTodo, setNewTodo] = useState('');
+
+  const deleteTask = (id) => {
+    console.log('Delete Task');
+    setTodos(todos.filter((item) => item.id !== id));
+  };
 
   const map = todos.map((items, index) => (
     <div key={index} className="todo__list">
@@ -19,7 +24,10 @@ export default function ToDo() {
           {items.text}
         </li>
       </ul>
-      <Button data="x" />
+      <FaTimes
+        style={{ color: 'red', cursor: 'pointer' }}
+        onClick={deleteTask}
+      />
     </div>
   ));
 

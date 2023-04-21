@@ -50,8 +50,8 @@ export default function App() {
           <Exercise8 />
         </div> */}
         <div className="todo__container">
-          {/* <ToDo /> */}
-          <Tasks />
+          <ToDo />
+          {/* <Tasks /> */}
         </div>
       </section>
     </Card>
