@@ -7,6 +7,7 @@ import Counter from './components/Counter';
 import Exercise5 from './components/Exercise5';
 import Exercise6 from './components/Exercise6';
 import FilterGender from './components/Exercise7';
+import Exercise8 from './components/Exercise8';
 import Toggle from './components/Toggle';
 import './style.css';
 import Card from './ui/Card';
@@ -37,12 +38,15 @@ export default function App() {
         {/* <div className="exercise6__container">
           <Exercise6 />
         </div> */}
-        <div className="exercise7__container">
+        {/* <div className="exercise7__container">
           <FilterGender />
-        </div>
-        <div className="toggle-form__container">
+        </div> */}
+        {/* <div className="toggle-form__container">
           <Toggle />
-        </div>
+        </div> */}
+        {/* <div className="exercise8__container">
+          <Exercise8 />
+        </div> */}
       </section>
     </Card>
   );
