@@ -8,6 +8,7 @@ import Exercise5 from './components/Exercise5';
 import Exercise6 from './components/Exercise6';
 import FilterGender from './components/Exercise7';
 import Exercise8 from './components/Exercise8';
+import Tasks from './components/TaskTracker';
 import ToDo from './components/ToDoList/ToDoList';
 import Toggle from './components/Toggle';
 import './style.css';
@@ -49,7 +50,8 @@ export default function App() {
           <Exercise8 />
         </div> */}
         <div className="todo__container">
-          <ToDo />
+          {/* <ToDo /> */}
+          <Tasks />
         </div>
       </section>
     </Card>
