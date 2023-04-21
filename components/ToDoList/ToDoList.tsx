@@ -16,25 +16,6 @@ export default function ToDo() {
     setTodos(todos.filter((item) => item.id !== id));
   };
 
-  const map = todos.map((items, index) => (
-    <div key={index} className="todo__list">
-      <ul>
-        <li>
-          <input type="checkbox" />
-          {items.text}
-        </li>
-      </ul>
-      <FaTimes
-        style={{ color: 'red', cursor: 'pointer' }}
-        onClick={deleteTask}
-      />
-    </div>
-  ));
-
-  const listHandler = (e: any) => {
-    setTodos(e.target.value);
-  };
-
   return (
     <div>
       <h3>Exercise 2: useState ToDoList</h3>
@@ -49,7 +30,22 @@ export default function ToDo() {
         <input className="inputAddTask" type="text" name="" id="" />
         <Button data="Add Task" />
       </section>
-      <section className="todo__container">{map}</section>
+      <section className="todo__container">
+        {todos.map((items, index) => (
+          <div key={index} className="todo__list">
+            <ul>
+              <li>
+                <input type="checkbox" />
+                {items.text}
+              </li>
+            </ul>
+            <FaTimes
+              style={{ color: 'red', cursor: 'pointer' }}
+              onClick={() => deleteTask(todos)}
+            />
+          </div>
+        ))}
+      </section>
     </div>
   );
 }
