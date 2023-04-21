@@ -72,3 +72,20 @@ button {
   text-align: left;
   flex-direction: column;
 }
+
+.todo__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo__list li {
+  display: flex;
+  gap: 10px;
+}
+
+.input-field__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
